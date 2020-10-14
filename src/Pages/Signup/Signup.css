@@ -1,0 +1,73 @@
+.signup{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+.signup .sideA{
+    width: 50%;
+    padding: 30px;
+    padding-left: 70px;
+}
+.signup h2{
+    font-size: 30px;
+    width: 400px;
+    letter-spacing: 0.1em;
+}
+.signup h3{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 20px 0;
+    width: 350px;
+}
+.signup label{
+    color: #979797;
+    font-size: 13px;
+}
+.signup span{
+    margin-right: 50px;
+    padding-top: 2px;
+}
+.signup input{
+    display: block;
+    width: 350px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    padding: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-top: 15px;
+}
+.signup button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    background-color: #00A3D7;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 19px;
+    width: 350px;
+    height: 40px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.signup .haveAccount{
+    display: flex;
+}
+.signup h4{
+    font-weight: 400;
+    font-size: 14px;
+}
+.linkToLogin{
+    margin-left: 50px;
+    text-decoration: none;
+    color: #00A3D7;
+    font-weight: 500;
+}
+
+.signup .sideB{
+    background-color: #00A3D7;
+    width: 50%;
+}
