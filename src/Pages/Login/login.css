@@ -1,0 +1,79 @@
+.login{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+.login .sideA{
+    width: 50%;
+    /* have to fix empty space at the bottom of the pages  */
+    padding: 8em;
+    padding-left: 140px;
+}
+.login h2{
+    font-size: 30px;
+    width: 400px;
+    letter-spacing: 0.1em;
+}
+.login h3{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 20px 0;
+    width: 350px;
+}
+.login label{
+    color: #979797;
+    font-size: 13px;
+}
+.login span{
+    margin-right: 50px;
+    padding-top: 2px;
+}
+.login input{
+    display: block;
+    width: 350px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    padding: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-top: 15px;
+}
+.login .loginForgotPassword {
+    color: #979797;
+    font-size: 13px; 
+    /* float to right */
+}
+.login button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.3em;
+    background-color: #00A3D7;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 19px;
+    width: 350px;
+    height: 40px;
+    margin-top: 26px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.login .createAccount button{
+    padding-bottom: 7px;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-left: 20px;
+    background-color: #023316;
+}
+
+.login h4{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.login .sideB{
+    background-color: #00A3D7;
+    width: 50%;
+}
