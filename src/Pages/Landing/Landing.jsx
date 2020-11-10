@@ -8,7 +8,7 @@ import './Landing.css'
 
 
 const Landing = () => {
-    return(
+    return( //need to fix the sign up link 
         <div className="landing">
             <div className="landing-nav">
                 <img src={logo} alt="website logo" />
@@ -17,16 +17,16 @@ const Landing = () => {
                         <Link to="/signup" className="sign-up-link">Sign Up</Link>
                     </li>
                     <li>
-                        Login
+                        <Link to="/login" className="log-in-link">Login</Link>
                     </li>
                 </ul>
             </div>
             <div className="welcome">
                 <div className="class-welcome">
                     <h3>WELCOME TO YOUR DEVELOPER COMMUNITY</h3>
-                    <p>Share developer ideas</p>
-                    <p>Share developer ideas</p>
-                    <p>Share developer ideas</p>
+                    <p>Share your development ideas</p>
+                    <p>Network with developers</p>
+                    <p>Join development conversations</p>
                 </div>
                 <div className="class-image">
                     <img src={homeLogo} alt="dev-chat home logo" />

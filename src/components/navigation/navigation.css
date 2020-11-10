@@ -4,9 +4,12 @@
     font-size: 14px;
 }
 .navigation nav{
-    background-color: #00A3D7;
+    background-color: #00536e;
     display: flex;
     justify-content: space-between;
+}
+.navigation img{
+    width: 60px;
 }
 .search-bar{
     width: 340px;

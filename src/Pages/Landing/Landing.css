@@ -32,9 +32,11 @@
 }
 .landing-nav .sign-up:hover{
     background-color: #00A3D7;
-    
 }
-
+.landing-nav .log-in-link{
+    text-decoration: none;
+    color: #00A3D7;
+}
 .welcome{
     display: flex;
     justify-content: center;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+//importng the logo
+import logo from '../../assets/logo.svg'
 //importing the logos
 import { FaSearch } from 'react-icons/fa' //search bar 
 import  { FaHome } from 'react-icons/fa' //home logo
@@ -15,7 +17,7 @@ const Navigation = () => {
         <div className="navigation">
             <nav>
                 <div className="search-bar">
-                    <p>logo</p>
+                    <img src={logo} alt="dev chatter logo"/>
                     <form>
                         <p><FaSearch /></p>
                         <input type="text" placeholder="Search" />

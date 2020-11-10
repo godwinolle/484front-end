@@ -6,7 +6,7 @@
 .login .sideA {
   width: 50%;
   /* have to fix empty space at the bottom of the pages  */
-  padding: 8em;
+  padding: 117px;
   padding-left: 140px;
 }
 .login h2 {
