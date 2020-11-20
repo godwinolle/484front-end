@@ -1,7 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom'
 //importng the logo
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/DevChatter-LogoWhite.png'
 //importing the logos
 import { FaSearch } from 'react-icons/fa' //search bar 
 import  { FaHome } from 'react-icons/fa' //home logo
@@ -25,14 +26,18 @@ const Navigation = () => {
                 </div>
                 <div>
                     <ul>
-                        <li>
-                            <p className="nav-icon"><FaHome /></p>
-                            <p>Home</p>
-                        </li>
+                        <Link to="/feed" className="nav-links">
+                            <li>
+                                <p className="nav-icon"><FaHome /></p>
+                                <p>Home</p>
+                            </li>
+                        </Link>
+                        <Link to="/profile" className="nav-links">
                         <li>
                             <p className="nav-icon"><IoIosPerson /></p>
                             <p>Profile</p>
                         </li>
+                        </Link>
                         <li>
                             <p className="nav-icon"><BiMessageRounded /></p>
                             <p>Messages</p>

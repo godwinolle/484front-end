@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../assets/mainLogo.svg'
+import logo from '../../assets/DevChatter-LogoWhite.png'
 import './logoSide.css'
 
 const logoSide = () => {

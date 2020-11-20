@@ -1,21 +1,12 @@
 import React from 'react';
 import './Profile.css';
-import { FaSearch } from 'react-icons/fa'
 
+import Navigation from '../../components/navigation/navigation'
 
 const Profile = () => {
     return (
         <div className="profile">
-            <div className="topnav" >
-                <div className="search-container">
-                    <form>
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button type="submit"><FaSearch/></button>
-                    </form>          
-                </div>
-            </div>
-            
-
+            <Navigation />
             <header>
                 <img src="https://placeimg.com/400/400/tech" alt="Drawing of John Doe" className="profile-image"/>
             </header>

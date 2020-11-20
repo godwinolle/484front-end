@@ -8,6 +8,8 @@ import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/Signup';
 import Feed from './Pages/Feed/Feed'
 
+import Profile from './Pages/Profile/Profile';
+
 const App = () => {
   return (
     <div className="App">
@@ -17,6 +19,7 @@ const App = () => {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/feed" component={Feed} />
+          <Route exact path="/profile" component={Profile} />
         </Switch>
       </Router>
     </div>
