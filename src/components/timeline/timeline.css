@@ -1,9 +1,50 @@
 .time-line{
-    border: 1px solid #737373;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 7px;
+    background-color: #FAFAFA;
+    border: 0.5px solid #E2E2E2;
+    border-radius: 3px;
     width: 550px;
-    height: 1000px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.125em;
+}
+.time-line .time-line-post{
+    padding: 10px;
+    padding-left: 19px;
+}
+.time-line .userPost-info{
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+}
+.time-line img{
+    width: 65px;
+    height: 68px;
+}
+.time-line .userPost-bio{
+    padding-top: 16px;
+}
+.time-line .userPost-bio .name{
+    font-weight: 700;
+}
+.time-line .userPost-bio .occupation{
+    color: #676767;
+}
+
+.time-line .post{
+    margin-top: 10px;
+}
+
+.time-line .time-line-interaction{
+    background: #F1F1F1;
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.time-line-interaction .likes , .comments{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
 }

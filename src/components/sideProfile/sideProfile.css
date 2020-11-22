@@ -20,6 +20,11 @@
     position: relative;
     top: -40px;
 }
+.sideProfile img{
+    width: 81px;
+    height: 83px;
+    border-radius: 50%;
+}
 .sideProfile .user-name{
     margin-top: -24px;
     font-weight: 700;

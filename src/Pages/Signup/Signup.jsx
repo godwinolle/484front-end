@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 //importing components to use in other places
 import LogoSide from '../../components/logoSide/logoSide';
 
 //importing functions used
-import { pattern } from '../../components/pattern/pattern'
+import { pattern } from '../../components/pattern/pattern';
+import { newUsers } from '../../components/newAndReturningUsers/newUsers'
 
 //importing the icons to be used
 import { AiOutlineMail } from 'react-icons/ai'
@@ -15,28 +16,31 @@ import { BiLockAlt } from 'react-icons/bi'
 
 import './Signup.css'
 
+
 const Signup = () => {
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');
   const [error, setError] = useState(''); //this is going to be generating an error message if needed
-  const [redirect, setRedirect] = useState(false); //redirecting to the feed page
+  //const [redirect, setRedirect] = useState(false); //redirecting to the feed page
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    name.trim();
     email.trim();
     username.trim();
     password1.trim();
     password2.trim();
     let result = pattern.test(email); //testing to make sure the email input is an actual email
-    if(email !== '' && username !== '' && password1 !== '' && password2 !== ''){
+    if(name !== '' && email !== '' && username !== '' && password1 !== '' && password2 !== ''){
         if(result){
           if(password1 === password2){
-            console.log('Successful login attempt');
-            console.log(email, username, password1);
             setError('');
-            setRedirect(true)
+            newUsers(name, username, password1, email); //posting to the users on the backend
           } else{
             setError('Passwords do not match');
           }
@@ -48,16 +52,18 @@ const Signup = () => {
     }
   }
 
-  if(redirect){
-    return <Redirect to="/feed" />
-  }
-
   return (
     <div className="signup">
       <div className="sideA">
         <h2>Get your free account today.</h2>
         <h3>Are you in the IT world and want to meet with other's and share ideas?</h3>
         <form onSubmit= { handleSubmit }>
+
+          <label><span><MdPerson /></span>name </label>
+          <input type="text" value={ name } onChange = {(e) => {
+            setName(e.target.value) //setting the name to the value obtained
+          }}/> 
+          <br /> <br />
 
           <label><span><AiOutlineMail /></span>email </label>
           <input type="text" value={ email } onChange={(e) => {
