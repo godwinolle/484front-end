@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { NameContext } from '../../NameContext'
 
 import { GrLocation } from 'react-icons/gr';
 import { FiExternalLink } from 'react-icons/fi'
@@ -7,13 +9,16 @@ import person from '../../assets/person.png'
 import './sideProfile.css'
 
 const SideProfile = () => {
+    const [name] = useContext(NameContext)
+
     return(
         <div className="sideProfile">
             <div className="header"></div>
             <div className="image">
                 <img src={person} alt="person" />
             </div>
-            <p className="user-name">Jennifer Doe</p>
+            <p className="user-name">{ name }</p>
+            <p className="user-bio">jennydoe1</p>
             <p className="user-bio">Software Engineer at Amazon</p>
             <p className="edit-profile-button">Edit Profile</p>
             <hr />

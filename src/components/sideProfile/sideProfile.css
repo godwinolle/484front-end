@@ -1,94 +1,93 @@
-.sideProfile{
-    font-family: 'Montserrat', sans-serif;
-    width: 315px;
-    height: 370px;
-    border: 1px solid #737373;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2px;
+.sideProfile {
+  font-family: "Montserrat", sans-serif;
+  width: 315px;
+  height: 400px;
+  border: 1px solid #737373;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2px;
 }
 
-.sideProfile .header{
-    background-color: #959595;
-    height: 80px;
+.sideProfile .header {
+  background-color: #959595;
+  height: 80px;
 }
-.sideProfile .image{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: -40px;
+.sideProfile .image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -40px;
 }
-.sideProfile img{
-    width: 81px;
-    height: 83px;
-    border-radius: 50%;
+.sideProfile img {
+  width: 81px;
+  height: 83px;
+  border-radius: 50%;
 }
-.sideProfile .user-name{
-    margin-top: -24px;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.125em;
-    text-align: center;
+.sideProfile .user-name {
+  margin-top: -24px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.125em;
+  text-align: center;
 }
-.sideProfile .user-bio{
-    margin-top: 14px;
-    letter-spacing: 0.125em;
-    text-align: center;
-    font-size: 14px;
+.sideProfile .user-bio {
+  margin-top: 14px;
+  letter-spacing: 0.125em;
+  text-align: center;
+  font-size: 14px;
 }
-.sideProfile .edit-profile-button{
-    border: 1px solid #737373;
-    border-radius: 3px;
-    margin: 14px auto;
-    font-family: 'Montserrat', sans-serif;
-    width: 180px;
-    height: 25px;
-    cursor: pointer;
-    background-color: #EDEDED;
-    text-align: center;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sideProfile .edit-profile-button {
+  border: 1px solid #737373;
+  border-radius: 3px;
+  margin: 14px auto;
+  font-family: "Montserrat", sans-serif;
+  width: 180px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #ededed;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sideProfile hr{
-    margin: 0 auto;
-    width: 87%;
+.sideProfile hr {
+  margin: 0 auto;
+  width: 87%;
 }
-.sideProfile .bottom-half{
-    margin: 0 auto;
-    width: 87%;
+.sideProfile .bottom-half {
+  margin: 0 auto;
+  width: 87%;
 }
-.sideProfile .following-followers{
-    margin-top: 14px;
-    font-weight: 700;
-    color: #747474;
-    display: flex;
-    justify-content: space-between;
+.sideProfile .following-followers {
+  margin-top: 14px;
+  font-weight: 700;
+  color: #747474;
+  display: flex;
+  justify-content: space-between;
 }
-.sideProfile .following-followers div{
-    width: 150px;
-    display: flex;
-    justify-content: space-around;
+.sideProfile .following-followers div {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
 }
-.sideProfile .follow-number{
-    color: #00A3D7;
+.sideProfile .follow-number {
+  color: #00a3d7;
 }
-.sideProfile .bottom-half .location{
-    margin-top: 14px;
+.sideProfile .bottom-half .location {
+  margin-top: 14px;
 }
-.sideProfile .bottom-half .link{
-    margin-top: 14px;
+.sideProfile .bottom-half .link {
+  margin-top: 14px;
 }
-.sideProfile .bottom-half .link a{
-    color: #000;
-    text-decoration: none;
-    transition: 0.4s ease;
+.sideProfile .bottom-half .link a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.4s ease;
 }
-.sideProfile .bottom-half .link a:hover{
-    color: #00A3D7;
-    text-decoration: underline;
-    
+.sideProfile .bottom-half .link a:hover {
+  color: #00a3d7;
+  text-decoration: underline;
 }

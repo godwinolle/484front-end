@@ -7,7 +7,7 @@ import logo from '../../assets/DevChatter-LogoWhite.png'
 import { FaSearch } from 'react-icons/fa' //search bar 
 import  { FaHome } from 'react-icons/fa' //home logo
 import { IoIosPerson } from 'react-icons/io' //profile logo
-import { BiMessageRounded } from 'react-icons/bi' //messaging logo
+//import { BiMessageRounded } from 'react-icons/bi' //messaging logo
 import { BsFillPeopleFill } from 'react-icons/bs' //networks logo
 import { MdNotifications } from 'react-icons/md' //notifications logo
 
@@ -38,10 +38,6 @@ const Navigation = () => {
                             <p>Profile</p>
                         </li>
                         </Link>
-                        <li>
-                            <p className="nav-icon"><BiMessageRounded /></p>
-                            <p>Messages</p>
-                        </li>
                         <li>
                             <p className="nav-icon"><BsFillPeopleFill /></p>
                             <p>Network</p>

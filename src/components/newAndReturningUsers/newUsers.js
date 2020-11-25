@@ -2,7 +2,7 @@ import axios from'axios'
 
 export async function newUsers(name, username, password1, email){
     try{
-      const response = await axios.post('https://cosc484-backend.herokuapp.com/signup', { 
+      const response = await axios.post('/signup', { 
         name: name,
         username: username,
         password: password1,
@@ -15,6 +15,15 @@ export async function newUsers(name, username, password1, email){
     }
 }
 
-export async function returningUsers(){
-    
+export async function returningUsers(email, password){
+    try{
+      const response = await axios.post('/login', {
+        email: email,
+        password: password
+      });
+      await response.json;
+      console.log(response);
+    } catch(err){
+      console.log(err)
+    }
 }

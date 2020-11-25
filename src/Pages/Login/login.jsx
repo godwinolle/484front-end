@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom' //importing 
+import { returningUsers } from '../../components/newAndReturningUsers/newUsers'
 
 //importing components to use in other places
 import LogoSide from '../../components/logoSide/logoSide';
 
-//Icons for login page
 import { MdPerson } from 'react-icons/md'
 import { BiLockAlt } from 'react-icons/bi'
 
 import './login.css';
 
-
 const Login = () => {
 
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(''); //generates error message
   const [redirect, setRedirect] = useState(false); //will redirect to feed page
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    username.trim();
+    email.trim();
     password.trim();
-    if(username !== '' && password !== ''){
-      console.log(username, password)
+    if(email !== '' && password !== ''){
+      console.log(email, password)
       setError('');
-      setRedirect(true);
+      returningUsers(email, password);
+      //setRedirect(true);
     } else{
-      setError('Invalid username and password combination entered')
+      setError('Invalid email and password combination entered')
     }
   }
 
@@ -41,9 +41,9 @@ const Login = () => {
         <h2>Login</h2>
         <h3>WELCOME BACK!</h3>
         <form onSubmit= { handleSubmit }>
-          <label><span><MdPerson /></span>username </label>
-          <input type="text" value={ username } onChange = {(e) => {
-            setUsername(e.target.value) //sets the username to the value that is obtained
+          <label><span><MdPerson /></span>email </label>
+          <input type="text" value={ email } onChange = {(e) => {
+            setEmail(e.target.value) //sets the email to the value that is obtained
           }}/>  
           <br /> <br />
 
