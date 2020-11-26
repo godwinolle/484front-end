@@ -11,10 +11,16 @@ import Landing from './Pages/Landing/Landing'
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/Signup';
 import Feed from './Pages/Feed/Feed'
+import { useAuth } from './auth-context'
 
 import Profile from './Pages/Profile/Profile';
 
 const App = () => {
+
+  const { loggedIn } = useAuth();
+
+
+
   return (
     <NameProvider>
       <div className="App">
