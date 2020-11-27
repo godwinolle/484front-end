@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom'
 import './App.css';
 
 
@@ -19,7 +19,13 @@ const App = () => {
 
   const { loggedIn } = useAuth();
 
-
+  const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route{...rest} render={(props) => (
+      loggedIn === true
+        ? <Component {...props}/>
+        : <Redirect to='/login' />
+    )}/>
+  )
 
   return (
     <NameProvider>
@@ -29,7 +35,7 @@ const App = () => {
             <Route exact path="/" component={Landing} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/feed" component={Feed} />
+            <PrivateRoute exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
           </Switch>
         </Router>
