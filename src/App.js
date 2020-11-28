@@ -7,11 +7,12 @@ import './App.css';
 import { NameProvider } from './NameContext';
 
 //importing of the pages
-import Landing from './Pages/Landing/Landing'
+import Landing from './Pages/Landing/Landing';
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/Signup';
-import Feed from './Pages/Feed/Feed'
-import { useAuth } from './auth-context'
+import Feed from './Pages/Feed/Feed';
+import pageNotFound from './Pages/pageNotFound/pageNotFound';
+import { useAuth } from './auth-context';
 
 import Profile from './Pages/Profile/Profile';
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <PrivateRoute exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
+            <Route path="" component={pageNotFound} />
           </Switch>
         </Router>
       </div>
