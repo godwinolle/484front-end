@@ -35,6 +35,8 @@ const Login = () => {
         password: password
       }).then(  res => {
          console.log(res.data);
+         localStorage.setItem('MongoIdToken', `Bearer ${res.data.token}`);
+
          login();
       })
       .catch(err => console.log(err))

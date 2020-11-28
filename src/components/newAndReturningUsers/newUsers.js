@@ -10,6 +10,7 @@ export async function newUsers(name, username, password1, email){
       });
       await response.json;
       console.log(response);
+      localStorage.setItem('MongoIdToken', `Bearer ${response.data.token}`)
     } catch(err){
       console.log(err)
     }
