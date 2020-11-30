@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom' //importing 
-import { returningUsers } from '../../components/newAndReturningUsers/newUsers'
+import returningUsers  from '../../components/newAndReturningUsers/newUsers'
+import axios from 'axios'
+
 
 //importing components to use in other places
 import LogoSide from '../../components/logoSide/logoSide';
@@ -9,9 +11,13 @@ import { MdPerson } from 'react-icons/md'
 import { BiLockAlt } from 'react-icons/bi'
 
 import './login.css';
+import { useAuth } from '../../auth-context';
 
 const Login = () => {
 
+  const { loggedIn } = useAuth();
+
+  const {login} = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(''); //generates error message
@@ -24,16 +30,33 @@ const Login = () => {
     if(email !== '' && password !== ''){
       console.log(email, password)
       setError('');
-      returningUsers(email, password);
-      //setRedirect(true);
+      axios.post('/login', {
+        email: email,
+        password: password
+      }).then(  res => {
+         console.log(res.data);
+         localStorage.setItem('MongoIdToken', `Bearer ${res.data.token}`);
+
+         login();
+      })
+      .catch(err => console.log(err))
+
+      // returningUsers(email,password)
+        
+      // setRedirect(true);
     } else{
       setError('Invalid email and password combination entered')
     }
+
   }
 
-  if(redirect){
-    return <Redirect to="/feed" />
-  }
+  // return loggedIn ? <Redirect to="/feed" /> : <Redirect to="/login" />
+  
+  if(loggedIn){
+    return < Redirect to= "/feed" />
+  } 
+
+  
 
   return (
     <div className="login">
