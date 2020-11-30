@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom'
 import './App.css';
 
@@ -32,6 +32,19 @@ if(token) {
   }
 }
 
+export const LogoutButton = () => {
+  const [loggedOut, setLoggedOut] = useState(false)
+
+  const logout = () => {
+    localStorage.removeItem(token)
+    setLoggedOut(true)
+  };
+
+  if(loggedOut){
+    return <Redirect to="/" push={true} />
+  }
+}
+
 const App = () => {
 
   const PrivateRoute = ({ component: Component, authenticated,  ...rest }) => (
@@ -43,15 +56,15 @@ const App = () => {
     />
   );
 
-  const AuthRoute = ({ component: Component, ...rest }) => (
-    <Route
-    {...rest} 
-    render={(props) => 
-      authenticated === true ? <Component {...props}/> : <Redirect to='/login' />
-    }
+  // const AuthRoute = ({ component: Component, ...rest }) => (
+  //   <Route
+  //   {...rest} 
+  //   render={(props) => 
+  //     authenticated === true ? <Component {...props}/> : <Redirect to='/login' />
+  //   }
     
-    />
-  )
+  //   />
+  // )
 
   return (
     <NameProvider>
@@ -61,7 +74,7 @@ const App = () => {
             <Route exact path="/" component={Landing} />
             <Route exact path="/signup" component={Signup} />
             <PrivateRoute exact path="/login" component={Login} authenticated ={authenticated} />
-            <AuthRoute exact path="/feed" component={Feed} />
+            <Route exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
             <Route path="" component={pageNotFound} />
           </Switch>
