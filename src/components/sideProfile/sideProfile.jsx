@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-
+import React, { useState,useContext } from 'react'
+import Edit from '/home/kidus/COSC_484/cosc484_frontend/484front-end/src/components/edit/edit'
 import { NameContext } from '../../NameContext'
 
 import { GrLocation } from 'react-icons/gr';
@@ -9,8 +9,7 @@ import person from '../../assets/person.png'
 import './sideProfile.css'
 
 const SideProfile = () => {
-    const [name] = useContext(NameContext)
-
+    
     return(
         <div className="sideProfile">
             <div className="header"></div>
@@ -20,7 +19,6 @@ const SideProfile = () => {
             <p className="user-name">{ name }</p>
             <p className="user-bio">jennydoe1</p>
             <p className="user-bio">Software Engineer at Amazon</p>
-            <p className="edit-profile-button">Edit Profile</p>
             <hr />
             <div className="bottom-half">
                 <div className="following-followers">
