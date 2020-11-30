@@ -23,7 +23,7 @@ const Edit = ({show, closeModal}) => {
 
         if(validEmail){
             setError('');
-            updateUsers(name, username, email)
+            //updateUsers(name, username, email)
             setRedirect(true);
         }else{
             setError('Invalid Email');
