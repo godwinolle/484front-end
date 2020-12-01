@@ -33,7 +33,7 @@ const Login = () => {
     if(email !== '' && password !== ''){
       console.log(email, password)
       setError('');
-      axios.post('/login', {
+      axios.post('https://cosc484-backend.herokuapp.com/login', {
         email: email,
         password: password
       }).then(  res => {

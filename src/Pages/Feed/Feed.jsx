@@ -18,7 +18,7 @@ class Feed extends Component {
     }
 
     componentDidMount() {
-                axios.get('/posts')
+                axios.get('https://cosc484-backend.herokuapp.com/posts')
                 .then(res => {
                     console.log(res.data.resources)
                     this.setState({
