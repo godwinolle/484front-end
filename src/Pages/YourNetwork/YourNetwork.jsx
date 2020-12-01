@@ -8,21 +8,42 @@ const YourNetwork = () => {
         <div className="yournetwork">
             <Navigation />
 
-           <div className="yourNetwork">
+           <div className="yourNetwork_header">
                 <h2>Your Network</h2>
             </div>
             
-            <table>
-            <tr>
-            <div className="friends">
-            <th><p className="profilepicture"></p></th>
-            <th><h3>Name </h3>
-                <h3>Job/Title</h3>
-                <h3>Place of Study</h3>
-                <p className="location">Location</p></th>
+            <div className = "YourNetwork_body">
+                <div className="friends">
+                    <p className="profilepicture"></p>
+                    <div className = "friend_info">
+                        <h3>Name </h3>
+                        <h3>Job/Title</h3>
+                        <h3>Place of Study</h3>
+                        <p className="location">Location</p>
+                    </div>
+                    <button className = "dismiss-btn">dismiss</button>
+                </div>
+                <div className="friends">
+                    <p className="profilepicture"></p>
+                    <div className = "friend_info">
+                        <h3>Name </h3>
+                        <h3>Job/Title</h3>
+                        <h3>Place of Study</h3>
+                        <p className="location">Location</p>
+                    </div>
+                    <button className = "dismiss-btn">dismiss</button>
+                </div>
+                <div className="friends">
+                    <p className="profilepicture"></p>
+                    <div className = "friend_info">
+                        <h3>Name </h3>
+                        <h3>Job/Title</h3>
+                        <h3>Place of Study</h3>
+                        <p className="location">Location</p>
+                    </div>
+                    <button className = "dismiss-btn">dismiss</button>
+                </div>
             </div>
-            </tr>
-            </table>
 
         </div>    
         

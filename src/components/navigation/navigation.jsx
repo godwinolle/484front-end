@@ -38,14 +38,18 @@ const Navigation = () => {
                             <p>Profile</p>
                         </li>
                         </Link>
+                        <Link to= "/yourNetwork" className = "nav-links">
                         <li>
                             <p className="nav-icon"><BsFillPeopleFill /></p>
                             <p>Network</p>
                         </li>
+                        </Link>
+                        <Link to= "/Network" className = "nav-links">
                         <li>
                             <p className="nav-icon"><MdNotifications /></p>
                             <p>Notifications</p>
                         </li>
+                        </Link>
                         <Link to="/" className="nav-links">
                         <li>
                             <p className="nav-icon"><IoIosPerson /></p>

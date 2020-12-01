@@ -1,10 +1,10 @@
-.yourNetwork{
+.yourNetwork_header{
     position: absolute;
     width: 1250px;
     height: 550px;
     left: 50px;
     top: 85px;
-    
+    padding-top: 30px;
     display: flex;
     justify-content: space-around;
     
@@ -12,18 +12,38 @@
     border-radius: 26px;
     }
 
+
 .friends{
-    position: absolute;
+    position: relative;
     width: 1200px;
     height: 146px;
     left: 70px;
     top: 120px;
-    
-    display: inline-table;
+    margin-top: 2px;
+    display: flex;
     justify-content: space-around;
     
     background: #999999;
     }
+.friends_info{
+    display: flex;
+    position:absolute;
+}
+.friends_info div{
+    flex:1;
+    margin: 0;
+    padding:0;
+}
+.dismiss-btn{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    height:35px;
+    background-color: #999999;
+    font-size: 25px;
+    margin-top: 50px;
+
+}
 /* Elipse for profile picture 
 .profilepic{
 position: absolute;
