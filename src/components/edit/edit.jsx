@@ -3,7 +3,7 @@ import './edit.css'
 
 import React, {useState } from "react";
 import { pattern } from "../pattern/pattern";
-import { updateUsers } from '../newAndReturningUsers/newUsers';
+//import { updateUsers } from '../newAndReturningUsers/newUsers';
 import { Redirect } from 'react-router-dom';
 
 
@@ -23,7 +23,7 @@ const Edit = ({show, closeModal}) => {
 
         if(validEmail){
             setError('');
-            //updateUsers(name, username, email)
+           // updateUsers(name, username, email)
             setRedirect(true);
         }else{
             setError('Invalid Email');
@@ -38,12 +38,12 @@ const Edit = ({show, closeModal}) => {
         <div className = "edit_pos" >
         <div className =  "edit_wrapper" style = {
             {
-                transform: show? 'translate(50%)': 'translate(-100vh)',
+                transform: show? 'translateY(50%)': 'translateY(-100vh)',
                 opacity: show? '1': '0'
             }
         }> 
             <div className = "edit_header">
-                <h1>Edit info</h1>
+                <h1>Edit Info</h1>
                 <span onClick = {closeModal} className = "close_edit">x</span>
             </div>
             <div className = "edit_body">
@@ -64,7 +64,7 @@ const Edit = ({show, closeModal}) => {
                     <input type ="text" value = { email}onChange = {(e) =>{
                         setEmail(e.target.value)}}/>
                     <br/><br/>
-                    <button  onClick = {closeModal} className = "edit_submit"type = "submit" >Edit</button>
+                    <button  onClick = {closeModal} className = "edit_submit"type = "submit" >Done</button>
                 </form>
             </div>
         </div>

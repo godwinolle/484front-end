@@ -11,6 +11,7 @@ import Landing from './Pages/Landing/Landing';
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/Signup';
 import Feed from './Pages/Feed/Feed';
+import YourNetwork from './Pages/yourNetwork/YourNetwork'
 import pageNotFound from './Pages/pageNotFound/pageNotFound';
 import { useAuth } from './auth-context';
 
@@ -77,6 +78,7 @@ const App = () => {
             <Route exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
             <Route path="" component={pageNotFound} />
+            <Route exact path="/your" component={YourNetwork} />
           </Switch>
         </Router>
       </div>
