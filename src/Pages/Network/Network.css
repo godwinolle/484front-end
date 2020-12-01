@@ -1,0 +1,247 @@
+/* background from number of people in network */
+.YourNetwork{
+    position: absolute;
+    width: 331px;
+    height: 464px;
+    left: 39px;
+    top: 157px;
+    
+    background: #C4C4C4;
+    }
+    /* # of people in network */
+    .YourNetwork h1{
+    position: absolute;
+    width: 153px;
+    height: 119px;
+    left: 100px;
+    top: 60px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 117px;
+    letter-spacing: 0.125em;
+    
+    
+    color: #00A3D7;
+    }
+    /* number of people in your network */
+    .YourNetwork h3{
+    position: absolute;
+    width: 217px;
+    height: 35px;
+    left: 60px;
+    top: 170px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.125em;
+    
+    color: #000000;
+    }
+    /* see all hyperlink for people in network */
+    .seeAll{
+    position: absolute;
+    width: 120px;
+    height: 29px;
+    left: 100px;
+    top: 200px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.125em;
+    
+    color: #00A3D7;
+    background: #C4C4C4;
+    border: 0px solid #fff;
+    }
+    
+    /* background for invitations */
+    .invitations{
+    position: absolute;
+    width: 906px;
+    height: 464px;
+    left: 421px;
+    top: 157px;
+    
+    display: flex;
+    justify-content: space-around;
+    
+    background: #C4C4C4;
+    border-radius: 26px;
+    }
+    /* Invitations title */
+    .invitations h2{
+    position: center;
+    width: 256px;
+    height: 43px;
+    left: 439px;
+    top: 170px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    
+    color: #000000;
+    }
+    /* See all invitations hyperlink */
+    .yourNetwork h4{
+    position: absolute;
+    width: 94px;
+    height: 29px;
+    left: 1216px;
+    top: 176px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.125em;
+    
+    color: #00A3D7;
+    }
+    
+    /* Elipse for invitation profile */ 
+    .newRequest{
+    position: absolute;
+    width: 870px;
+    height: 146px;
+    left: 439px;
+    top: 245px;
+    
+    display: inline-table;
+    justify-content: space-around;
+    
+    background: #999999;
+    }
+    /* Invitation Name 
+    .newRequest h3{
+    position: center;
+    width: 333px;
+    height: 38px;
+    left: 615px;
+    top: 273px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 37px;
+    letter-spacing: 0.125em;
+    
+    color: #000000;
+    }*/
+    
+    .dismiss{
+    position: absolute;
+    width: 121px;
+    height: 30px;
+    left: 983px;
+    top: 300px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.125em;
+    
+    color: #000000;
+    background: #999999;
+    border: 0px solid #fff;
+    }
+    
+    /* Line Between Invitations */
+    .linesep{
+    position: absolute;
+    width: 906px;
+    height: 0px;
+    left: 421px;
+    top: 423px;
+    
+    border: 1px solid #000000;
+    }
+    /* Ellipse 1 */
+    .profilepicture{
+    position: center;
+    width: 130px;
+    height: 130px;
+    left: 439px;
+    top: 245px;
+    
+    background: #d4cbcb;
+    border-radius: 100px;
+    margin-top: 7px;
+    margin-left: 10px;
+    }
+    
+    /*Accept Invitation button*/
+    .accept {
+    position: absolute;
+    width: 131px;
+    height: 33px;
+    left: 1141px;
+    top: 302px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    
+    color: #FFFFFF;
+    
+    
+    position: absolute;
+    width: 193px;
+    height: 58px;
+    left: 1110px;
+    top: 289px;
+    
+    background: #00A3D7;
+    border: 0px solid #fff;
+    
+    border-radius: 45px;
+    position: absolute;
+    width: 131px;
+    height: 33px;
+    left: 1141px;
+    top: 302px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.125em;
+    
+    color: #FFFFFF;
+    
+    position: absolute;
+    width: 193px;
+    height: 58px;
+    left: 1110px;
+    top: 289px;
+    
+    background: #00A3D7;
+    border-radius: 45px;
+    
+    
+    }

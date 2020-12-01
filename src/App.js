@@ -11,6 +11,8 @@ import Landing from './Pages/Landing/Landing';
 import Login from './Pages/Login/login';
 import Signup from './Pages/Signup/Signup';
 import Feed from './Pages/Feed/Feed';
+import Network from './Pages/Network/Network';
+import YourNetwork from './Pages/YourNetwork/YourNetwork';
 import pageNotFound from './Pages/pageNotFound/pageNotFound';
 import { useAuth } from './auth-context';
 
@@ -60,12 +62,13 @@ const App = () => {
       <div className="App">
         <Router>
           <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/signup" component={Signup} />
-            <PrivateRoute exact path="/login" component={Login} authenticated ={authenticated} />
-            <Route exact path="/feed" component={Feed} />
-            <Route exact path="/profile" component={Profile} />
-            <Route path="" component={pageNotFound} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/feed" component={Feed} />
+          <Route exact path="/profile" component={Profile} />
+          <Route exact path="/network" component={Network} />
+          <Route exact path="/yournetwork" component={YourNetwork} />
           </Switch>
         </Router>
       </div>
