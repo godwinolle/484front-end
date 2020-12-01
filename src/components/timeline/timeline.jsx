@@ -33,7 +33,7 @@ class TimeLine extends Component {
 
     
     likePost = (id) => {
-        axios.post(`/users/${localStorage.userId}/post/${id}/like`, {
+        axios.post(`https://cosc484-backend.herokuapp.com/users/${localStorage.userId}/post/${id}/like`, {
             likes : [
                 {
                     userId: localStorage.userId,

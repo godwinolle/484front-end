@@ -25,7 +25,7 @@ class NewPost extends Component {
         event.preventDefault();
     
     
-        axios.post(`/users/${localStorage.userId}/post`, {
+        axios.post(`https://cosc484-backend.herokuapp.com/users/${localStorage.userId}/post`, {
             text: this.state.tweet,
             comment: [
                 {

@@ -20,7 +20,7 @@ const SideProfile = () => {
                 <img src={person} alt="person" />
             </div>
             <p className="user-name">{ name ? name: user }</p>
-            <p className="user-bio">jennydoe1</p>
+
             <p className="user-bio">Software Engineer at Amazon</p>
             <p className="edit-profile-button">Edit Profile</p>
             <hr />
