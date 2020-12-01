@@ -1,6 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { NameContext } from '../../NameContext';
+import jwtDecode from 'jwt-decode';
+import axios from 'axios'
+
+
 
 //importing components to use in other places
 import LogoSide from '../../components/logoSide/logoSide';

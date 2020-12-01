@@ -1,4 +1,6 @@
 import axios from'axios'
+import jwtDecode from 'jwt-decode';
+
 
 export async function newUsers(name, username, password1, email){
     try{
@@ -9,8 +11,12 @@ export async function newUsers(name, username, password1, email){
         email: email
       });
       await response.json;
-      console.log(response);
+      console.log(response.data.token);
       localStorage.setItem('MongoIdToken', `Bearer ${response.data.token}`)
+      const token = localStorage.MongoIdToken;
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.payload._id;
+      localStorage.setItem('userId', userId)
     } catch(err){
       console.log(err)
     }

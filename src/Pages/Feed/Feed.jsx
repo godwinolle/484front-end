@@ -37,7 +37,7 @@ class Feed extends Component {
                         <NewPost />
                         {this.state.posts.map((post) => {
                             return(
-                                <TimeLine post={post.text} likes={post.likes.length} comments={post.comment.length} key={ post._id.toString()}/>
+                                <TimeLine post={post.text} key = { post._id.toString()} likes = { post.likes} comment = {post.comment} author = { post.author}  postId = {post._id} />
                             )
                         })}    
                     </div>

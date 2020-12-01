@@ -15,6 +15,8 @@ import { BiLockAlt } from 'react-icons/bi'
 
 import './login.css';
 import { useAuth } from '../../auth-context';
+import jwtDecode from 'jwt-decode';
+
 
 const Login = () => {
 
@@ -39,6 +41,11 @@ const Login = () => {
       }).then(  res => {
          console.log(res.data);
          localStorage.setItem('MongoIdToken', `Bearer ${res.data.token}`);
+         const token = localStorage.MongoIdToken;
+         const decodedToken = jwtDecode(token);
+          const userId = decodedToken.payload._id;
+          localStorage.setItem('userId', userId)
+
 
          login();
       })

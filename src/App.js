@@ -24,6 +24,9 @@ let authenticated;
 const token = localStorage.MongoIdToken;
 if(token) {
   const decodedToken = jwtDecode(token);
+  console.log(decodedToken)
+  // const userId = decodedToken.payload._id;
+  // localStorage.setItem('userId', userId)
   if(decodedToken.exp * 1000 < Date.now()) {
     window.location.href = '/login'
     authenticated = false;
@@ -39,7 +42,7 @@ const App = () => {
   const PrivateRoute = ({ component: Component, authenticated,  ...rest }) => (
     <Route
       {...rest} 
-       render={(props) => authenticated === true? <Redirect to='/feed' /> : <Component {...props}/> 
+       render={(props) => authenticated === true? <Redirect to='/feed' />  : <Component {...props}/>
       
       }   
     />
@@ -49,7 +52,7 @@ const App = () => {
   //   <Route
   //   {...rest} 
   //   render={(props) => 
-  //     authenticated === true ? <Component {...props}/> : <Redirect to='/login' />
+  //     authenticated !== true ? <Redirect to='/login' />  : <Redirect to='/feed' />
   //   }
     
   //   />
@@ -61,8 +64,8 @@ const App = () => {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route exact path="/signup" component={Signup} />
-            <PrivateRoute exact path="/login" component={Login} authenticated ={authenticated} />
+            <PrivateRoute exact path="/signup" component={Signup}  authenticated={authenticated}/>
+            <PrivateRoute exact path="/login" component={Login} authenticated={authenticated} />
             <Route exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
             <Route path="" component={pageNotFound} />
