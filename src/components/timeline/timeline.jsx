@@ -34,9 +34,13 @@ class TimeLine extends Component {
     
     likePost = (id) => {
         axios.post(`/users/${localStorage.userId}/post/${id}/like`, {
-            userID : localStorage.userId,
-            like: true
-         })
+            likes : [
+                {
+                    userId: localStorage.userId,
+                     like: true
+                }
+            ]
+        })
         .then(res => {
           console.log(res.data);
           console.log(localStorage.userId)

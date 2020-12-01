@@ -25,10 +25,7 @@ class NewPost extends Component {
         event.preventDefault();
     
     
-        axios.post(`/users/${localStorage.userId}/post`, { 
-            _id: "",
-            userID: "",
-            author: "",
+        axios.post(`/users/${localStorage.userId}/post`, {
             text: this.state.tweet,
             comment: [
                 {
@@ -36,8 +33,13 @@ class NewPost extends Component {
                     text: ""
                 }
             ],
-            likes: []
-         })
+            likes: [
+                {
+                    userId: "",
+                    like: false
+                }
+            ]
+        })
           .then(res => {
             console.log(res.data);
           })
