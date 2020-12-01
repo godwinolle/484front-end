@@ -16,7 +16,7 @@ const SideProfile = () => {
             <div className="image">
                 <img src={person} alt="person" />
             </div>
-            <p className="user-name">{ name }</p>
+            <p className="user-name">Name</p>
             <p className="user-bio">jennydoe1</p>
             <p className="user-bio">Software Engineer at Amazon</p>
             <hr />
