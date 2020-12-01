@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom'
 import './App.css';
 
@@ -15,18 +15,45 @@ import pageNotFound from './Pages/pageNotFound/pageNotFound';
 import { useAuth } from './auth-context';
 
 import Profile from './Pages/Profile/Profile';
+import jwtDecode from 'jwt-decode';
+
+
+
+let authenticated;
+
+const token = localStorage.MongoIdToken;
+if(token) {
+  const decodedToken = jwtDecode(token);
+  if(decodedToken.exp * 1000 < Date.now()) {
+    window.location.href = '/login'
+    authenticated = false;
+  } else {
+   authenticated = true;
+  }
+}
+
+
 
 const App = () => {
 
-  const { loggedIn } = useAuth();
+  const PrivateRoute = ({ component: Component, authenticated,  ...rest }) => (
+    <Route
+      {...rest} 
+       render={(props) => authenticated === true? <Redirect to='/feed' /> : <Component {...props}/> 
+      
+      }   
+    />
+  );
 
-  const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route{...rest} render={(props) => (
-      loggedIn === true
-        ? <Component {...props}/>
-        : <Redirect to='/login' />
-    )}/>
-  )
+  // const AuthRoute = ({ component: Component, ...rest }) => (
+  //   <Route
+  //   {...rest} 
+  //   render={(props) => 
+  //     authenticated === true ? <Component {...props}/> : <Redirect to='/login' />
+  //   }
+    
+  //   />
+  // )
 
   return (
     <NameProvider>
@@ -35,8 +62,8 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/login" component={Login} />
-            <PrivateRoute exact path="/feed" component={Feed} />
+            <PrivateRoute exact path="/login" component={Login} authenticated ={authenticated} />
+            <Route exact path="/feed" component={Feed} />
             <Route exact path="/profile" component={Profile} />
             <Route path="" component={pageNotFound} />
           </Switch>

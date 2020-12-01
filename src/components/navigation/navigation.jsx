@@ -46,6 +46,12 @@ const Navigation = () => {
                             <p className="nav-icon"><MdNotifications /></p>
                             <p>Notifications</p>
                         </li>
+                        <Link to="/" className="nav-links">
+                        <li>
+                            <p className="nav-icon"><IoIosPerson /></p>
+                            <p>Logout</p>
+                        </li>
+                        </Link>
                     </ul>
                 </div>
             </nav>
