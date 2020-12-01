@@ -19,6 +19,7 @@ const AuthProvider = (props) => {
     }
  
     const logout = () => {
+        localStorage.removeItem('MongoIdToken')
         sleep().then(()=> setLoggedIn(false))
     }
 
@@ -30,6 +31,21 @@ const AuthProvider = (props) => {
 
     return <AuthContext.Provider value = {authContextValue}  {...props} />
 };
+
+// const signOut = () => {
+//     const [loggedOut, setLoggedOut] = useState(false)
+  
+//     const logout = () => {
+//       localStorage.removeItem("MongoIdToken")
+//       setLoggedOut(true)
+//     };
+  
+//     if(loggedOut){
+//       return <Redirect to="/" push={true} />
+//     }
+  
+//     return <button onClick={logout}>Logout</button>;
+//   };
 
 const useAuth = () => React.useContext(AuthContext);
 

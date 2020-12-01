@@ -32,18 +32,7 @@ if(token) {
   }
 }
 
-export const LogoutButton = () => {
-  const [loggedOut, setLoggedOut] = useState(false)
 
-  const logout = () => {
-    localStorage.removeItem(token)
-    setLoggedOut(true)
-  };
-
-  if(loggedOut){
-    return <Redirect to="/" push={true} />
-  }
-}
 
 const App = () => {
 
