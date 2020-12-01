@@ -22,26 +22,11 @@ export async function returningUsers(email, password){
         password: password
       });
       await response.json;
+      console.log(response.token);
       console.log(response);
+
+      localStorage.setItem("token", response.token)
     } catch(err){
       console.log(err)
     }
 }
-
-
-// const returningUsers = (email, password) => {
-
-//   const {login} = useAuth();
-//   return (
-//      axios.post('/login', {
-//       email: props.email,
-//       password: props.password
-//     }).then(  res => {
-//        console.log(res.data);
-//        login();
-//     })
-//     .catch(err => console.log(err))
-//   )}
-
-
-// export default returningUsers

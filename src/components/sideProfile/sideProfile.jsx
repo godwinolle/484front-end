@@ -5,11 +5,13 @@ import { NameContext } from '../../NameContext'
 import { GrLocation } from 'react-icons/gr';
 import { FiExternalLink } from 'react-icons/fi'
 
-import person from '../../assets/person.png'
+import person from '../../assets/person.svg'
 import './sideProfile.css'
 
 const SideProfile = () => {
     const [name] = useContext(NameContext)
+
+    const user = localStorage.getItem("name")
 
     return(
         <div className="sideProfile">
@@ -17,7 +19,7 @@ const SideProfile = () => {
             <div className="image">
                 <img src={person} alt="person" />
             </div>
-            <p className="user-name">{ name }</p>
+            <p className="user-name">{ name ? name: user }</p>
             <p className="user-bio">jennydoe1</p>
             <p className="user-bio">Software Engineer at Amazon</p>
             <p className="edit-profile-button">Edit Profile</p>

@@ -20,8 +20,8 @@ import './Signup.css'
 
 
 const Signup = () => {
-  const [name, setName] = useContext(NameContext)
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useContext(NameContext);
   const [username, setUsername] = useState('');
   const [password1, setPassword1] = useState('');
   const [password2, setPassword2] = useState('');

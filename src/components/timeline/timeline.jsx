@@ -1,6 +1,6 @@
 import React from 'react';
 
-import person from '../../assets/person.png'
+import person from '../../assets/person.svg'
 
 import { AiOutlineHeart } from 'react-icons/ai'
 //import { AiFillHeart } from 'react-icons/ai'
@@ -28,11 +28,11 @@ const TimeLine = (props) => {
             <div className="time-line-interaction">
                 <div className="likes">
                     <p><AiOutlineHeart /></p>
-                    <p>12,453</p>
+                    <p>{props.likes}</p>
                 </div>
                 <div className="comments">
                     <p><FaRegCommentDots /></p>
-                    <p>2,432</p>
+                    <p>{props.comments}</p>
                 </div>
             </div>
         </div>

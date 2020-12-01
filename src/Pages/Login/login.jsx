@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, Redirect } from 'react-router-dom' //importing 
+
+import { NameContext } from '../../NameContext';
+
 import returningUsers  from '../../components/newAndReturningUsers/newUsers'
 import axios from 'axios'
 
@@ -18,7 +21,7 @@ const Login = () => {
   const { loggedIn } = useAuth();
 
   const {login} = useAuth();
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useContext(NameContext);
   const [password, setPassword] = useState('');
   const [error, setError] = useState(''); //generates error message
   const [redirect, setRedirect] = useState(false); //will redirect to feed page
@@ -38,10 +41,6 @@ const Login = () => {
          login();
       })
       .catch(err => console.log(err))
-
-      // returningUsers(email,password)
-        
-      // setRedirect(true);
     } else{
       setError('Invalid email and password combination entered')
     }
@@ -52,9 +51,8 @@ const Login = () => {
   
   if(loggedIn){
     return < Redirect to= "/feed" />
-  } 
 
-  
+  } 
 
   return (
     <div className="login">
