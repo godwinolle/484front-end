@@ -11,21 +11,47 @@ const Profile = () => {
                 <img src="https://placeimg.com/400/400/tech" alt="Drawing of John Doe" className="profile-image"/>
             </header>
 
-            <div className="tag">
-                <h3>Name </h3>
+            <div className="name">
+                <br></br>
+                <br></br>
+                <br></br>
+                <h2>Name</h2>
+            </div>
+
+
+            <div className="job">
                 <h3>Job/Title</h3>
+                </div>
+
+                <div className="edit">
+                    <button>Edit</button>
+                </div>
+
+
+            <div className="place">
                 <h3>Place of Study</h3>
-                <p className="location">Location</p>
-            </div>
+                </div>
 
-            <button className="send-message">Send a Message</button>
-            
-            <div>
+
+            <div className="Location">
+                <p>Location</p>
+                </div>
+
+  
+            <div className="bio">
                 <h3>Biography</h3>
+                
             </div>
 
-            <div>
+            <br></br>
+
+            <div className="post1">
                 <h4>User post</h4>
+            </div>
+            
+            <div class="divider"/>
+
+            <div className="post2">
                 <h4>User post</h4>
             </div>
             
