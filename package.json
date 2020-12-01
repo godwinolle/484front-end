@@ -7,12 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.0",
-<<<<<<< HEAD
     "react": "^16.14.0",
-=======
-    "jwt-decode": "^3.1.2",
-    "react": "^16.13.1",
->>>>>>> 9a3a72dbc6ce563719f69820026ff441b97dfecc
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
